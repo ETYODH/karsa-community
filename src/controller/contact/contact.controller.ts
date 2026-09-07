@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
-import { db } from '../../db/db';
-import { messagesTable } from '../../db/schema';
+
+import { db } from '../../db/db.js';
+
+import { messagesTable } from '../../db/schema.js';
 
 export const getContacts = async (req: Request, res: Response) => {
   try {
