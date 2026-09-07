@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { getKegiatan } from '@/controller/contact/kegiatan.controller';
+
+import { getKegiatan } from '../../controller/contact/kegiatan.controller.js';
 
 const router = Router();
 
