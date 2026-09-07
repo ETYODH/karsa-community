@@ -1,14 +1,14 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 import {
   getContacts,
   createContact,
-} from "../../controller/contact/contact.controller.js";
+} from '../../controller/contact/contact.controller.js';
 
 const router = Router();
 
-router.get("/", getContacts);
+router.get('/', getContacts);
 
-router.post("/", createContact);
+router.post('/', createContact);
 
 export default router;
