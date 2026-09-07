@@ -6,9 +6,7 @@ import { messagesTable } from '../../db/schema.js';
 
 export const getContacts = async (req: Request, res: Response) => {
   try {
-    const contacts = await db
-      .select()
-      .from(messagesTable);
+    const contacts = await db.select().from(messagesTable);
 
     res.status(200).json({
       success: true,
@@ -26,12 +24,7 @@ export const getContacts = async (req: Request, res: Response) => {
 
 export const createContact = async (req: Request, res: Response) => {
   try {
-    const {
-      name,
-      email,
-      phone,
-      message,
-    } = req.body;
+    const { name, email, phone, message } = req.body;
 
     // Validasi
     if (!name || !email || !phone || !message) {
